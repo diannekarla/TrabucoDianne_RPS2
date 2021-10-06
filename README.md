@@ -1,3 +1,6 @@
+![alt text](image1.png "RPS Game")
+
+
 # Rock Paper Scissors Game
 
 TODO: Write a project description
@@ -21,7 +24,7 @@ TODO: Write usage instructions
 ## Credits
 
 TODO: Write credits
-// give accreditation to any resources / authors whose work yur're using
+// give accreditation to any resources / authors whose work you're using
 
 ## License
 
