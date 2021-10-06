@@ -1,4 +1,4 @@
-# Project Name
+# Rock Paper Scissors Game
 
 TODO: Write a project description
 
