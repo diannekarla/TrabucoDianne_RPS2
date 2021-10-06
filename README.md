@@ -6,7 +6,6 @@ TODO: Write a project description
 
 TODO: Describe the installation process
 
-## Usage
 
 TODO: Write usage instructions
 
@@ -18,14 +17,12 @@ TODO: Write usage instructions
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
-## History
-
-TODO: Write history
 
 ## Credits
 
 TODO: Write credits
+// give accreditation to any resources / authors whose work yur're using
 
 ## License
 
-TODO: Write license
+MIT
