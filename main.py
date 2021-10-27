@@ -10,6 +10,23 @@ player = False
 playerLives = 2
 computerLives = 2
 
+def winorlose(status):
+    print ("You " + status)
+
+    choice = input("Do you want to play again? y/n: ")
+
+    global playerLives
+    global computerLives
+    global player
+
+    if choice == "n":
+        print("===============Thank you==============")
+        exit ()
+    elif choice == "y":
+        playerLives = 2
+        computerLives = 2
+        player = False
+
 #set up our game loop so that we can keep playing and not exit
 while player is False:
     player = input("Choose your weapon: rock, paper or scissors: " )
@@ -48,12 +65,10 @@ while player is False:
     print("Player lives: " + str(playerLives))
     print("Computer lives: " + str(computerLives))
 
-    if playerLives == 0 or computerLives == 0:
-        print("Game over! Do you want to play again?")
+    if playerLives == 0:
+        winorlose("lost")
 
-        choice = input("Do you want to play again? y/n: ")
-
-        if choice is "n":
-            exit()
+    elif computerLives == 0:
+        winorlose("won")
 
     player = False
