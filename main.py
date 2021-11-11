@@ -1,74 +1,31 @@
 from random import randint 
+from gameComponents import winLose, gameVars, weapons
 
-choices = ["rock", "paper", "scissors"]
-
-# player will be the weapon the player chooses via input
-
-player = False
-
-# these lives need to decrement when a player loses a round
-playerLives = 2
-computerLives = 2
-
-def winorlose(status):
-    print ("You " + status)
-
-    choice = input("Do you want to play again? y/n: ")
-
-    global playerLives
-    global computerLives
-    global player
-
-    if choice == "n":
-        print("===============Thank you==============")
-        exit ()
-    elif choice == "y":
-        playerLives = 2
-        computerLives = 2
-        player = False
 
 #set up our game loop so that we can keep playing and not exit
-while player is False:
-    player = input("Choose your weapon: rock, paper or scissors: " )
-    computer = choices[randint(0,2)]
+while gameVars.player is False:
 
-    print("player chose: " + player)
-    print("computer chose: " + computer)
+    gameVars.player = input("Choose your weapon: rock, paper or scissors: " )
+    gameVars.computer = gameVars.choices[randint(0,2)]
 
-    if computer == player:
-        print("Tie! Try again")
+    print("player chose: " + gameVars.player)
+    print("computer chose: " + gameVars.computer)
 
-    elif player == "rock":
-        if computer == "paper":
-            print("You lose!")
-            playerLives = playerLives - 1
-        else:
-            print("You win!")
-            computerLives = computerLives - 1
-  
-    elif player == "paper":
-        if computer == "scissors":
-            print("You lose!")
-            playerLives = playerLives - 1
-        else:
-            print("You win!")
-            computerLives = computerLives - 1
-       
-    elif player == "scissors":
-        if computer == "rock":
-            print("You lose!")
-            playerLives = playerLives - 1
-        else:
-            print("You win!")
-            computerLives = computerLives - 1
+    fight = weapons.gameResult(gameVars.player, gameVars.computer)
+    
+    if fight == 0:
+        gameVars.computerLives = gameVars.computerLives - 1
 
-    print("Player lives: " + str(playerLives))
-    print("Computer lives: " + str(computerLives))
+    elif fight == 1:
+        gameVars.playerLives = gameVars.playerLives - 1
 
-    if playerLives == 0:
-        winorlose("lost")
+    print("Player lives: " + str(gameVars.playerLives))
+    print("Computer lives: " + str(gameVars.computerLives))
 
-    elif computerLives == 0:
-        winorlose("won")
+    if gameVars.playerLives == 0:
+        winLose.winorlose("lost")
 
-    player = False
+    elif gameVars.computerLives == 0:
+        winLose.winorlose("won")
+
+    gameVars.player = False
