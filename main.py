@@ -24,9 +24,9 @@ while gameVars.player is False:
     print("Computer lives: " + str(gameVars.computerLives))
 
     if gameVars.playerLives == 0:
-        winLose.winorlose("lost")
+        winLose.winorlose("lost :(")
 
     elif gameVars.computerLives == 0:
-        winLose.winorlose("won")
+        winLose.winorlose("won :)")
 
     gameVars.player = False
