@@ -9,8 +9,8 @@ while gameVars.player is False:
     gameVars.player = input("Choose your weapon: rock, paper or scissors: " )
     gameVars.computer = gameVars.choices[randint(0,2)]
 
-    print("player chose: " + gameVars.player)
-    print("computer chose: " + gameVars.computer)
+    print("Player 👉: " + gameVars.player)
+    print("Computer 👉: " + gameVars.computer)
 
     fight = weapons.gameResult(gameVars.player, gameVars.computer)
     
@@ -20,13 +20,13 @@ while gameVars.player is False:
     elif fight == 1:
         gameVars.playerLives = gameVars.playerLives - 1
     print("----------------------------------------")
-    print("Player lives: " + str(gameVars.playerLives))
-    print("Computer lives: " + str(gameVars.computerLives))
+    print("Player ♡: " + str(gameVars.playerLives))
+    print("Computer ♡: " + str(gameVars.computerLives))
 
     if gameVars.playerLives == 0:
-        winLose.winorlose("lost :(")
+        winLose.winorlose("Looost :(")
 
     elif gameVars.computerLives == 0:
-        winLose.winorlose("won :)")
+        winLose.winorlose("Wooon :)")
 
     gameVars.player = False
