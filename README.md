@@ -22,5 +22,5 @@ Built with [Python 3](https://www.python.org/doc/)
 
 Enjoy!
 
-### License 
-MIT
+### License
+© 2021 Dianne Karla Trabuco
