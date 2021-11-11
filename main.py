@@ -5,6 +5,7 @@ from gameComponents import winLose, gameVars, weapons
 #set up our game loop so that we can keep playing and not exit
 while gameVars.player is False:
 
+    print("========================================")
     gameVars.player = input("Choose your weapon: rock, paper or scissors: " )
     gameVars.computer = gameVars.choices[randint(0,2)]
 
@@ -18,7 +19,7 @@ while gameVars.player is False:
 
     elif fight == 1:
         gameVars.playerLives = gameVars.playerLives - 1
-
+    print("----------------------------------------")
     print("Player lives: " + str(gameVars.playerLives))
     print("Computer lives: " + str(gameVars.computerLives))
 
